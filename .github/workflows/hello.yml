@@ -1,0 +1,12 @@
+name: Hello # Name of the workflow
+
+on: push # Event that triggers the workflow
+
+jobs: # Define the jobs that run in the workflow
+  hello: # JobID
+    runs-on: ubuntu-latest # The type of machine to run the job on
+    steps:
+      - run: echo "Hello, world!" # The command to run in the job
+      - uses: actions/checkout@v4 # The action to run in the job
+        with:
+          ref: main
