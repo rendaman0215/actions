@@ -7,10 +7,7 @@ on:
         description: "env"
         required: true
         default: "dev"
-        type: choice
-        options:
-          - dev
-          - prod
+        type: environment
 
 jobs:
   environment:
