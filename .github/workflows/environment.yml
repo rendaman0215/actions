@@ -1,0 +1,24 @@
+name: Environment
+
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        description: "env"
+        required: true
+        default: "dev"
+        type: choice
+        options:
+          - dev
+          - prod
+
+jobs:
+  environment:
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.env }}
+    env:
+      USERNAME: ${{ vars.USERNAME }}
+      PASSWORD: ${{ secrets.PASSWORD }}
+    steps:
+      - run: echo "Hello, ${USERNAME}!"
+      - run: echo "${PASSWORD:0:1} ${PASSWORD#?}"
