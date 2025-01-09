@@ -1,0 +1,9 @@
+name: Debug Log
+
+on: workflow_dispatch
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "::debug::Hello, world!"

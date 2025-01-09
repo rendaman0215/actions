@@ -1,0 +1,11 @@
+name: Mask
+
+on: workflow_dispatch
+
+jobs:
+  mask:
+    env:
+      PASSWORD: SUPER_SECRET_PASSWORD
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "::add-mask::${SUPER_SECRET_PASSWORD}"

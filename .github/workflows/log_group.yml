@@ -1,0 +1,14 @@
+name: Log Group
+
+on: workflow_dispatch
+
+jobs:
+  group:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "::group::Hello, world!"
+      - run: echo "This is a group of log lines."
+      - run: echo "::endgroup::"
+      - run: echo "::group::Goodbye, world!"
+      - run: echo "This is another group of log lines."
+      - run: echo "::endgroup::"
