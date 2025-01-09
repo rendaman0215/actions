@@ -8,4 +8,4 @@ jobs:
       PASSWORD: SUPER_SECRET_PASSWORD
     runs-on: ubuntu-latest
     steps:
-      - run: echo "::add-mask::${SUPER_SECRET_PASSWORD}"
+      - run: echo "::add-mask::${PASSWORD}"
