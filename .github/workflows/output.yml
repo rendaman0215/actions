@@ -1,0 +1,16 @@
+name: Output
+
+on: workflow_dispatch
+
+jobs:
+  output:
+    runs-on: ubuntu-latest
+    steps:
+      - id: source
+        run: echo "result=hello" >> "${GITHUB_OUTPUT}"
+      - id: register
+        run: echo "RES=rendaman" >> "${GITHUB_ENV}"
+      - env:
+          RESULT: ${{ steps.source.outputs.result }}
+        run: echo "$RESULT from github output"
+      - run: echo "$RES from env"

@@ -1,6 +1,6 @@
 name: Hello # Name of the workflow
 
-on: push # Event that triggers the workflow
+on: workflow_dispatch # Event that triggers the workflow
 
 jobs: # Define the jobs that run in the workflow
   hello: # JobID
