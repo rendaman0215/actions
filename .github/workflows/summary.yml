@@ -1,0 +1,12 @@
+name: Summary
+
+on: workflow_dispatch
+
+jobs:
+  summary:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "## Summary" >> "${GITHUB_STEP_SUMMARY}"
+          echo "- narumi" >> "${GITHUB_STEP_SUMMARY}"
+          echo "- sumire" >> "${GITHUB_STEP_SUMMARY}"
