@@ -15,4 +15,8 @@ jobs:
         with:
           go-version-file: .go-version
       - name: Run tests
-        run: go test -v --cover go/excellent/*.go
+        run: |
+          {
+            echo "## Summary"
+            go test -v --cover go/excellent/*.go
+          } >> "${GITHUB_STEP_SUMMARY}"
