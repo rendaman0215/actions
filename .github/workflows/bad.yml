@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "::notice::BAD FILE DESU"
-      - uses: actions/setup-go@v4 # 古いバージョンを意図的に指定
+      - uses: actions/setup-go@v2 # 古いバージョンを意図的に指定
