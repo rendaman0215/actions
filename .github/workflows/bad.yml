@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "::notice::BAD FILE DESU"
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
